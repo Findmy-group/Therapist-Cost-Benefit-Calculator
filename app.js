@@ -2,22 +2,15 @@ document.getElementById('calculate').addEventListener('click', function() {
   const clients = parseFloat(document.getElementById('clients').value) || 0;
   const rate = parseFloat(document.getElementById('rate').value) || 0;
 
-  const baselineClients = 25;
-  const baselineRate = 50;
+  const weeks = 52;
 
-  const adminPerClientPerWeek = 766.67 / (baselineClients * 52);
-  const automatedAdminPerClientPerWeek = 191.67 / (baselineClients * 52);
-  const noShowRate = 0.05;
-  const paymentDelayFactor = (236.30 / (baselineClients * baselineRate * 52));
-  const extraSessionFactor = (28750 / (baselineClients * baselineRate * 52));
-
-  const manualAdmin = clients * 52 * adminPerClientPerWeek;
-  const automatedAdmin = clients * 52 * automatedAdminPerClientPerWeek;
+  const manualAdmin = clients * weeks * 0.5897461538461538;
+  const automatedAdmin = clients * weeks * 0.14743846153846152;
   const adminHoursSaved = manualAdmin - automatedAdmin;
 
-  const noShowLoss = clients * rate * 52 * noShowRate;
-  const paymentDelaySaving = clients * rate * 52 * paymentDelayFactor * (1 - 0.033333);
-  const extraRevenue = clients * rate * 52 * extraSessionFactor;
+  const noShowLoss = clients * rate * weeks * 0.05;
+  const paymentDelaySaving = clients * rate * weeks * 0.0036353846153846154;
+  const extraRevenue = clients * rate * weeks * 0.4423076923076923;
 
   const netBenefit = Math.round(adminHoursSaved + noShowLoss + paymentDelaySaving + extraRevenue);
 
