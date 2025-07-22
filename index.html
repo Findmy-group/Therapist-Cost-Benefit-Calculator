@@ -12,6 +12,7 @@
   <div class="container">
     <h1>Therapist: Cost Benefit Calculator</h1>
     <p class="subtitle">brought to you by Findmy-Therapist.com</p>
+
     <div class="card">
       <h2>👥 Staff Profile</h2>
       <label>How many clients do you see per week?</label>
@@ -20,14 +21,16 @@
       <input type="number" id="rate" value="50" min="0">
       <button id="calculate">Calculate</button>
     </div>
+
     <div class="card">
       <h2>📊 Results</h2>
-      <div class="row">Admin Hours per Year <span class="info" title="Estimated yearly time spent on scheduling, billing, and admin tasks.">ℹ️</span> <span id="adminHours">0</span></div>
-      <div class="row">Revenue Lost to No-Shows (5%) <span class="info" title="Projected income lost from missed sessions, based on 5% of bookings.">ℹ️</span> £<span id="noShowLoss">0</span></div>
-      <div class="row">Payment Delay Impact <span class="info" title="Approximate cost from waiting for payments, reflecting cash flow delays.">ℹ️</span> £<span id="delayImpact">0</span></div>
-      <div class="row">Extra Session Revenue <span class="info" title="Additional income possible if freed-up time is used for more sessions.">ℹ️</span> £<span id="extraRevenue">0</span></div>
-      <div class="highlight">💰 <strong>Net Annual Benefit:</strong> £<span id="netBenefit">0</span></div>
+      <div class="row"><span>Admin Hours per Year <span class="tooltip">ℹ️<span class="tooltiptext">Estimated yearly time spent on scheduling, billing, and admin tasks.</span></span></span><span id="adminHours">575</span></div>
+      <div class="row"><span>Revenue Lost to No-Shows (5%) <span class="tooltip">ℹ️<span class="tooltiptext">Projected income lost from missed sessions, based on 5% of bookings.</span></span></span><span>£<span id="noShowLoss">3250</span></span></div>
+      <div class="row"><span>Payment Delay Impact <span class="tooltip">ℹ️<span class="tooltiptext">Approximate cost from waiting for payments, reflecting cash flow delays.</span></span></span><span>£<span id="delayImpact">228</span></span></div>
+      <div class="row"><span>Extra Session Revenue <span class="tooltip">ℹ️<span class="tooltiptext">Additional income possible if freed-up time is used for more sessions.</span></span></span><span>£<span id="extraRevenue">28750</span></span></div>
+      <div class="highlight">💰 <strong>Net Annual Benefit:</strong> £<span id="netBenefit">32803</span></div>
     </div>
+
     <div class="footer">
       For further information on how we can help you make savings, please call our team 020 7459 4408 or email us: enquiries@findmy-therapist.com
     </div>
