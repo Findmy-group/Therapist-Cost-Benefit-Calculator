@@ -1,0 +1,9 @@
+{
+  "name": "Therapist: Cost Benefit Calculator",
+  "short_name": "TherapistCalc",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "icons": []
+}
