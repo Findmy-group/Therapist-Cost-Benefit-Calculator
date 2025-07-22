@@ -1,4 +1,8 @@
 
+function formatNumber(num) {
+  return num.toLocaleString('en-GB');
+}
+
 document.getElementById('calculate').addEventListener('click', function () {
   const clients = parseFloat(document.getElementById('clients').value) || 0;
   const rate = parseFloat(document.getElementById('rate').value) || 0;
@@ -23,9 +27,9 @@ document.getElementById('calculate').addEventListener('click', function () {
 
   const netBenefit = Math.round(adminHoursSaved + noShowLoss + paymentDelaySaving + extraSessionRevenue);
 
-  document.getElementById('adminHours').innerText = Math.round(adminHoursSaved);
-  document.getElementById('noShowLoss').innerText = Math.round(noShowLoss);
-  document.getElementById('delayImpact').innerText = Math.round(paymentDelaySaving);
-  document.getElementById('extraRevenue').innerText = Math.round(extraSessionRevenue);
-  document.getElementById('netBenefit').innerText = netBenefit;
+  document.getElementById('adminHours').innerText = formatNumber(Math.round(adminHoursSaved));
+  document.getElementById('noShowLoss').innerText = formatNumber(Math.round(noShowLoss));
+  document.getElementById('delayImpact').innerText = formatNumber(Math.round(paymentDelaySaving));
+  document.getElementById('extraRevenue').innerText = formatNumber(Math.round(extraSessionRevenue));
+  document.getElementById('netBenefit').innerText = formatNumber(netBenefit);
 });
