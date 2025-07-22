@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Cost Benefit Calculator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Therapist Cost Benefit Calculator</h1>
+        <div class="input-section">
+            <label>How many clients do you see per week?</label>
+            <input type="number" id="clients" value="25" min="0">
+            <label>What is your average session rate (£)?</label>
+            <input type="number" id="rate" value="50" min="0">
+            <button id="calculate">Calculate</button>
+        </div>
+        <div class="results-section">
+            <h2>Results</h2>
+            <div class="result-row">Admin Hours per Year <span class="info" title="Estimated yearly time spent on scheduling, billing, and admin tasks.">ℹ️</span>: <span id="adminHours">0</span></div>
+            <div class="result-row">Revenue Lost to No-Shows (5%) <span class="info" title="Projected income lost from missed sessions, based on 5% of bookings.">ℹ️</span>: £<span id="noShowLoss">0</span></div>
+            <div class="result-row">Payment Delay Impact <span class="info" title="Approximate cost from waiting for payments, reflecting cash flow delays.">ℹ️</span>: £<span id="delayImpact">0</span></div>
+            <div class="result-row">Extra Session Revenue <span class="info" title="Additional income possible if freed-up time is used for more sessions.">ℹ️</span>: £<span id="extraRevenue">0</span></div>
+            <div class="result-highlight">Net Annual Benefit <span class="info" title="Total potential yearly gain from automation, combining all savings.">ℹ️</span>: £<span id="netBenefit">0</span></div>
+        </div>
+    </div>
+</body>
+</html>
